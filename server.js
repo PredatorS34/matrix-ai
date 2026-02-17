@@ -15,8 +15,17 @@ app.post("/yorum", async (req, res) => {
       {
         model: "llama-3.3-70b-versatile",
         messages: [
-          { role: "system", content: "Sen uzman bir kader matrisi yorumlayıcısısın." },
-          { role: "user", content: `Bu kader matrisini yorumla: ${JSON.stringify(matrix)}` }
+          { role: "system", content: "Sen uzman bir kader matrisi ve numeroloji yorumcususun." },
+          { role: "user", content: `Kişinin kader matrisi analizini Türkçe olarak yaz. 
+Yorum 140–160 kelime arasında olsun. 
+Metin akıcı, doğal ve düzgün Türkçe ile yazılmalı. 
+Gereksiz tekrar, kalıp veya robotik ifadeler kullanılmamalı. 
+Kişinin güçlü yönleri, yaşam amacı, duygusal yapısı ve gelecekteki potansiyeli üzerinde dur. 
+Yorum mistik, derin ve kişiye özel hissi vermeli. 
+Okuyucuda merak ve keşfetme isteği uyandırmalı. 
+Bazı önemli sırların ve detayların henüz açığa çıkmadığı hissini ver.
+
+Matris: ${JSON.stringify(matrix)}` }
         ]
       },
       {
@@ -34,4 +43,5 @@ app.post("/yorum", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Server running"));
+
 
