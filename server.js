@@ -15,8 +15,8 @@ app.post("/yorum", async (req, res) => {
       {
         model: "llama-3.3-70b-versatile",
         messages: [
-          { role: "system", content: "You are a spiritual destiny matrix expert." },
-          { role: "user", content: `Interpret this destiny matrix: ${JSON.stringify(matrix)}` }
+          { role: "system", content: "Sen uzman bir kader matrisi yorumlayıcısısın." },
+          { role: "user", content: `Bu kader matrisini yorumla: ${JSON.stringify(matrix)}` }
         ]
       },
       {
@@ -34,3 +34,4 @@ app.post("/yorum", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Server running"));
+
