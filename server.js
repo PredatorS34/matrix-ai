@@ -15,7 +15,7 @@ app.post("/yorum", async (req, res) => {
       {
         model: "llama-3.3-70b-versatile",
         messages: [
-          { role: "system", content: "Sen uzman bir kader matrisi ve numeroloji yorumcususun." },
+          { role: "system", content: "Sen deneyimli bir numerolog, astrolog ve spiritüel danışmansın. Danışanlarına güçlü, derin ve etkileyici Türkçe yorumlar yaparsın." },
           { role: "user", content: `Kişinin kader matrisi analizini Türkçe olarak yaz. 
 Yorum 140–160 kelime arasında olsun. 
 Metin akıcı, doğal ve düzgün Türkçe ile yazılmalı. 
@@ -43,5 +43,6 @@ Matris: ${JSON.stringify(matrix)}` }
 });
 
 app.listen(3000, () => console.log("Server running"));
+
 
 
